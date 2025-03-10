@@ -43,60 +43,26 @@
             width: 80%;
             border-radius: 10px;
         }
-        .works .work-items {
+        .works .work-items, .social-items {
             display: flex;
             justify-content: center;
             gap: 10px;
         }
-        .work-item {
+        .work-item, .social-item, .archive-item {
             padding: 20px;
             border-radius: 5px;
             border: none;
         }
-        .work-item:nth-child(1) {
-            background-color: #69E7D0;
-        }
-        .work-item:nth-child(2) {
-            background-color: #61D29B;
-        }
-        .work-item:nth-child(3) {
-            background-color: #EEEEEE;
-        }
-        .work-item:nth-child(4) {
-            background-color: #F368E0;
-        }
-        .work-item a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            display: block;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
-        }
-        .social-items {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-        }
-        .social-item {
-            padding: 20px;
-            border-radius: 5px;
-            border: none;
-        }
-        .social-item:nth-child(1) {
-            background-color: #7289DA;
-        }
-        .social-item:nth-child(2) {
-            background-color: #0088CC;
-        }
-        .social-item:nth-child(3) {
-            background-color: #FF0000;
-        }
-        .social-item:nth-child(4) {
-            background-color: #333;
-        }
-        .social-item a {
+        .work-item:nth-child(1) { background-color: #FF6B6B; }
+        .work-item:nth-child(2) { background-color: #54A0FF; }
+        .work-item:nth-child(3) { background-color: #1DD1A1; }
+        .work-item:nth-child(4) { background-color: #F368E0; }
+        .social-item:nth-child(1) { background-color: #7289DA; }
+        .social-item:nth-child(2) { background-color: #0088CC; }
+        .social-item:nth-child(3) { background-color: #FF0000; }
+        .social-item:nth-child(4) { background-color: #333; }
+        .archive-item { background-color: #A52A2A; }
+        .work-item a, .social-item a, .archive-item a {
             color: white;
             text-decoration: none;
             font-weight: bold;
@@ -131,8 +97,14 @@
             <div class="social-items">
                 <div class="social-item"><a href="https://discord.gg/wY7v6ds2Pk" target="_blank">Discord server</a></div>
                 <div class="social-item"><a href="https://t.me/ricurn" target="_blank">Telegram</a></div>
-                <div class="social-item"><a href="https://www.youtube.com/@ricurns" target="_blank">YouTube</a></div>
+                <div class="social-item"><a href="https://www.youtube.com/@ricurn" target="_blank">YouTube</a></div>
                 <div class="social-item"><a href="https://github.com/ricurn" target="_blank">GitHub</a></div>
+            </div>
+        </section>
+        <section class="works">
+            <h2>Archive</h2>
+            <div class="archive-item">
+                <a href="/archiveVK" target="_blank">Архив ВК</a>
             </div>
         </section>
     </main>
