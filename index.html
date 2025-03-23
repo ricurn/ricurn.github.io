@@ -3,111 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ricurn</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>ricurn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Dela+Gothic+One&display=swap" rel="stylesheet">
     <style>
         body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #6ca0dc;
+            color: #1a1a1a;
             font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #E6E6FA, #6A5ACD);
-            color: white;
             text-align: center;
             margin: 0;
-            padding: 0;
         }
-        header {
-            background: url('header-bg.png') no-repeat center center;
-            background-size: cover;
-            padding: 50px 0;
-            position: relative;
-        }
-        h1 {
-            font-size: 60px;
-            font-weight: bold;
-            text-transform: lowercase;
-        }
-        .logo-overlay {
+        .header {
             position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 100px;
-            height: 100px;
-            background: url('logo.png') no-repeat center center;
-            background-size: contain;
+            top: 0;
+            width: 100%;
+            text-align: center;
+            font-family: 'Dela Gothic One', sans-serif;
+            font-size: 32px;
+            padding: 20px 0;
+            background-color: #5a8acb;
         }
-        .about, .works {
-            background: white;
-            color: black;
-            padding: 20px;
-            margin: 20px auto;
-            width: 80%;
-            border-radius: 10px;
+        .vinyl-container {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            margin-top: 80px;
         }
-        .works .work-items, .social-items {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
+        .vinyl {
+            width: 100%;
+            height: 100%;
+            animation: spin 3s linear infinite;
         }
-        .work-item, .social-item, .archive-item {
-            padding: 20px;
-            border-radius: 5px;
-            border: none;
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
         }
-        .work-item:nth-child(1) { background-color: #44c0c1; }
-        .work-item:nth-child(2) { background-color: #44c198; }
-        .work-item:nth-child(3) { background-color: #333; }
-        .work-item:nth-child(4) { background-color: #476eff; }
-        .social-item:nth-child(1) { background-color: #7289DA; }
-        .social-item:nth-child(2) { background-color: #0088CC; }
-        .social-item:nth-child(3) { background-color: #FF0000; }
-        .social-item:nth-child(4) { background-color: #333; }
-        .archive-item { background-color: #A52A2A; }
-        .work-item a, .social-item a, .archive-item a {
-            color: white;
-            text-decoration: none;
+        .text {
+            margin-top: 20px;
+            font-size: 40px;
             font-weight: bold;
-            display: block;
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>@ricurn</h1>
-        <div class="logo-overlay"></div>
-    </header>
-    <main>
-        <section class="about">
-            <h2>About Me</h2>
-            <p>I'm just a random guy who likes to translate games and do something funny.</p>
-            <p>I also like make music, design and developing something.</p>
-        </section>
-        <section class="works">
-            <h2>I'm working with:</h2>
-            <div class="work-items">
-                <div class="work-item"><a href="https://the.jackbox.su" target="_blank">The Box</a></div>
-                <div class="work-item"><a href="https://tdot.space" target="_blank">TDoT</a></div>
-                <div class="work-item"><a href="https://discord.gg/uE3n6Awrtj" target="_blank">AE Studios</a></div>
-				<div class="work-item"><a href="https://discord.gg/h6ZndqhEH4" target="_blank">Cloudyx High Tech</a></div>
-            </div>
-        </section>
-        <section class="works">
-            <h2>Social Media</h2>
-            <div class="social-items">
-                <div class="social-item"><a href="https://discord.gg/wY7v6ds2Pk" target="_blank">Discord server</a></div>
-                <div class="social-item"><a href="https://t.me/ricurn" target="_blank">Telegram</a></div>
-                <div class="social-item"><a href="https://www.youtube.com/@ricurn" target="_blank">YouTube</a></div>
-                <div class="social-item"><a href="https://github.com/ricurn" target="_blank">GitHub</a></div>
-            </div>
-        </section>
-        <section class="works">
-            <h2>Archive (VK)</h2>
-            <div class="archive-item">
-                <a href="/archiveVK" target="_blank">Архив ВК</a>
-            </div>
-        </section>
-    </main>
+    <div class="header">ricurn</div>
+    <div class="vinyl-container">
+        <svg class="vinyl" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="90" fill="none" stroke="#1a1a1a" stroke-width="4" />
+            <circle cx="100" cy="100" r="15" fill="#1a1a1a" />
+            <g stroke="#1a1a1a" stroke-width="5">
+                <pattern id="diagonalLines" patternUnits="userSpaceOnUse" width="10" height="10" patternTransform="rotate(45)">
+                    <line x1="0" y1="0" x2="0" y2="10" stroke="#1a1a1a" stroke-width="3" />
+                </pattern>
+                <circle cx="100" cy="100" r="90" fill="url(#diagonalLines)" />
+            </g>
+        </svg>
+    </div>
+    <div class="text">UNDER CONSTRUCTION</div>
 </body>
 </html>
